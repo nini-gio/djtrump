@@ -5,6 +5,8 @@ services:
     build: .
     depends_on:
       - postgres
+    environment:
+      - DJANGO_SETTINGS_MODULE=djtrump.settings.dev
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
